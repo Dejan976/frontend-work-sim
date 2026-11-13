@@ -4,13 +4,14 @@ import {products} from "./data/products";
 import { ProductCard } from "./components/ProductCard";
 function App() {
   return (
-    <>
+  
     <main className="min-h-screen bg-gray-50 p-8">
       <h1 className="text-3xl font-bold">SummitGear Market</h1>
       <p className="text-gray-600">Open the tickets folder to get started.</p>
-    </main>
-    <ProductCard product={products[0]}/>
-    </>
+   <ProductCard product={products[0]}/>
+   </main>
+    
+  
   );
 }
 
