@@ -3,8 +3,8 @@ import  type {Product} from '../types/product'
 export function ProductCard({product} : {product:Product}){
     return(
           <div className='border-2 rounded-2xl  border-gray-200   overflow-hidden'>
-            <div className='bg-gray-200'>
-              {product.stock < 10 && <span className='bg-yellow-200 text-red-500 text-sm-bold outline-orange-400'>Low stock</span>}  
+            <div className='bg-gray-200 relative' >
+              {product.stock < 10 && <span className=' absolute left-2 bg-yellow-200 text-red-500 text-sm font-bold p-1 rounded-full border-2 border-orange-500'>Low stock</span>}  
 <img src={product.thumbnail} alt={product.title}/>
             </div>
           <div className='bg-white p-4'>
