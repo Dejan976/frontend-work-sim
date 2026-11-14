@@ -2,8 +2,9 @@ import  type {Product} from '../types/product'
 
 export function ProductCard({product} : {product:Product}){
     return(
-          <div className='border-2 rounded-2xl  border-gray-200 pb-8 w-85 overflow-hidden'>
+          <div className='border-2 rounded-2xl  border-gray-200   overflow-hidden'>
             <div className='bg-gray-200'>
+              {product.stock < 10 && <span className='bg-yellow-200 text-red-500 text-sm-bold outline-orange-400'>Low stock</span>}  
 <img src={product.thumbnail} alt={product.title}/>
             </div>
           <div className='bg-white p-4'>
