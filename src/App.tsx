@@ -11,6 +11,7 @@ function App() {
     return product.stock > 0 && product.rating >= 4.5;
   });
    const furniture = products.filter((product)=> product.category === "furniture");
+   const luxury = products.filter((product)=>product.price > 5000);
   return (
    
     <>
@@ -19,6 +20,7 @@ function App() {
      <ProductSection title="Deals under $20" products={deals}/>
      <ProductSection  title="Top rated" products={topRated}/>
      <ProductSection title="Furniture" products={furniture}/>
+    <ProductSection title="Luxury(over  $5,000)" products={luxury}/>
     
 
    </main>
