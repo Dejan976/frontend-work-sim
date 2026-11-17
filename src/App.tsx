@@ -3,7 +3,6 @@
 import {products} from "./data/products";
 import {Navbar} from "./components/Navbar";
 import {Footer} from "./components/Footer";
-import {ProductGrid} from "./components/ProductGrid";
 import {ProductSection} from "./components/ProductSection"
 
 function App() {
@@ -17,12 +16,10 @@ function App() {
     <>
    <Navbar />
     <main className="min-h-screen bg-gray-50 p-8">
-      <h1 className="text-3xl font-bold ">SummitGear Market</h1>
-      <p className="text-gray-600">Open the tickets folder to get started.</p>
-     <ProductSection title="Deals" products={deals}/>
-     <ProductSection  title="Top Rated" products={topRated}/>
+     <ProductSection title="Deals under $20" products={deals}/>
+     <ProductSection  title="Top rated" products={topRated}/>
      <ProductSection title="Furniture" products={furniture}/>
-      <ProductGrid products={products}/>
+    
 
    </main>
     
