@@ -3,8 +3,8 @@
 import {products} from "./data/products";
 import {Navbar} from "./components/Navbar";
 import {Footer} from "./components/Footer";
-import {ProductSection} from "./components/ProductSection"
-
+import {ProductSection} from "./components/ProductSection";
+import{StatsBar} from "./components/StatsBar"
 function App() {
   const deals = products.filter((product)=> product.price < 20);
   const topRated = products.filter((product)=>{
@@ -17,6 +17,7 @@ function App() {
     <>
    <Navbar />
     <main className="min-h-screen bg-gray-50 p-8">
+      <StatsBar products={products}/>
      <ProductSection title="Deals under $20" products={deals}/>
      <ProductSection  title="Top rated" products={topRated}/>
      <ProductSection title="Furniture" products={furniture}/>
