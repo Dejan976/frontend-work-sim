@@ -4,7 +4,7 @@ import {products} from "./data/products";
 import {Navbar} from "./components/Navbar";
 import {Footer} from "./components/Footer";
 import {ProductSection} from "./components/ProductSection";
-import{StatsBar} from "./components/StatsBar"
+import{StatsBar} from "./components/StatsBar";
 function App() {
   const deals = products.filter((product)=> product.price < 20);
   const topRated = products.filter((product)=>{
