@@ -5,6 +5,7 @@ import {Navbar} from "./components/Navbar";
 import {Footer} from "./components/Footer";
 import {ProductSection} from "./components/ProductSection";
 import{StatsBar} from "./components/StatsBar";
+import { groupByCategory } from "./utils/groupByCategory";
 function App() {
   const deals = products.filter((product)=> product.price < 20);
   const topRated = products.filter((product)=>{
@@ -12,11 +13,14 @@ function App() {
   });
    const furniture = products.filter((product)=> product.category === "furniture");
    const luxury = products.filter((product)=>product.price > 5000);
+   const group = groupByCategory(products);
   return (
    
     <>
    <Navbar />
+   
     <main className="min-h-screen bg-gray-50 p-8">
+      
       <StatsBar products={products}/>
      <ProductSection title="Deals under $20" products={deals}/>
      <ProductSection  title="Top rated" products={topRated}/>
